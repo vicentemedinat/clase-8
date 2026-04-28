@@ -16,11 +16,11 @@
         @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
         :root {
-            --color-oscurisimo: #000;
-            --color-oscuro: #444;
-            --color-normal: #999;
-            --color-iluminado: #aaa;
-            --color-iluminadisimo: #ddd;
+            --color-oscurisimo: #000000;
+            --color-oscuro: #000000;
+            --color-normal: #2d359e;
+            --color-iluminado: #2d359e;
+            --color-iluminadisimo: #e1edff;
             --fuente: "Source Code Pro", monospace;
         }
 
@@ -784,7 +784,7 @@
                     var trabajo = datos.data;
                     console.log(trabajo);
                     trabajo.forEach((x) => {
-                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.id}</td><td>${x.name}</td><td>${x.title}</td><td>${x.grade}</td><td>${x.category}</td><td>${x.tutor}</td></tr>`;
+                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.id}</td><td>${x.name}</td><td><a href="${x.repository}" target="_blank">${x.title}</a></td><td>${x.grade}</td><td>${x.category}</td><td>${x.tutor}</td></tr>`;
                     });
                 })
                 .catch((error) => {
