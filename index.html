@@ -165,7 +165,7 @@
                     return respuesta.json();
                 })
                 .then((datos) => {
-                    var trabajo = datos.data;
+                    var trabajo = datos;
                     console.log(trabajo);
                     trabajo.forEach((x) => {
                         t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.number}</td><td>${x.name}</td><td><a href="${x.repository}" target="_blank">${x.title}</a></td><td>${x.grade}</td><td>${x.category}</td><td>${x.tutor}</td></tr>`;
